@@ -1,0 +1,10 @@
+{
+  "shop": {
+    "url": "mongodb://mongo:27017/kiloutou",
+    "database": "kiloutou",
+    "password": "",
+    "name": "kiloutou",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

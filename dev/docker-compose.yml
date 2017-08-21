@@ -1,0 +1,10 @@
+version: '2'
+services:
+  test-node:
+    build: .
+    command: sh -c 'npm install; npm start'
+    ports:
+      - '3003:3000'
+    volumes:
+      - ./app:/app
+     
