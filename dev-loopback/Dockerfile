@@ -7,6 +7,6 @@ MAINTAINER mbouanane@kiloutou.fr
 WORKDIR /app
 # Copiar el contenido de la carpeta local (fisica del host) 
 # => en el directorio actual del container (app en este caso por ls definición anterior WORKDIR)
-#ADD . /app
-COPY test-login-2/ .
+ADD . /app
+# COPY test-login-2/ .
 # parecido al anterior ADD . /app 

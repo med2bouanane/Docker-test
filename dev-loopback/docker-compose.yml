@@ -2,6 +2,7 @@ version: "2.0"
 services:
   test-node:
     build: .
+    #image: "test-node:${TAG}"
     command: sh -c 'npm install; npm start'
     ports:
       - '3002:3000'
@@ -14,7 +15,7 @@ services:
   mongo:
     image: "mongo:latest"
     ports: 
-      - "27017:27017"
+      - "27018:27017"
     volumes: 
       - /data/db:/data/db
     command: mongod --smallfiles     
