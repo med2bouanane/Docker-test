@@ -1,0 +1,16 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment: 
+      POSTGRES_USER:  'postgres'
+      POSTGRES_PASSWORD:  'postgres'
+      POSTGRES_DB:  'tracing'
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d  
+      #- ./data:var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+# sudo docker-compose -f docker-compose.yml up

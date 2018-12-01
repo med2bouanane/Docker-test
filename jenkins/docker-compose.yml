@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    image: trion/jenkins-docker-client
+    restart: always
+    entrypoint: "/usr/local/bin/entrypoint.sh"
+    volumes:
+      - ../opt/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "30080:8080"
+      - "30081:50000"

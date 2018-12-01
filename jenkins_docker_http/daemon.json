@@ -1,0 +1,13 @@
+{
+    "registry-mirrors": [],
+    "insecure-registries": [
+      "172.16.2.81:20083",
+      "172.16.2.81:20082",
+      "172.16.2.81:20080",
+      "frindusdev01:20083",
+      "frindusdev01:20082",
+      "frindusdev01:20080"
+    ],
+    "debug": true,
+    "experimental": true
+  }

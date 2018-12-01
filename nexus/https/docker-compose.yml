@@ -1,0 +1,18 @@
+version: "3"
+services:
+  web:
+    image: bradbeck/nexus-https
+    restart: always
+    volumes:
+      - ../opt/my-nexus:/nexus-data
+      - ../../opt/my-nexus-https:/nexus-data 
+      - ../../opt/mynexus-ssl:/opt/sonatype/nexus/etc/ssl 
+    ports:
+      - "40080:8081"
+      - "40043:8443"
+      - "40082:8082"
+      - "40083:8083"
+      - "40182:8182"
+      - "40183:8183"
+
+# $ docker run -d -p 8081:8081 -p 8443:8443 -v ~/nexus-data:/nexus-data -v ~/nexus-ssl:/opt/sonatype/nexus/etc/ssl --name nexus bradbeck/nexus-https     

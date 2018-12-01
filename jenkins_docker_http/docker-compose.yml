@@ -1,0 +1,24 @@
+version: "3"
+services:
+  web:
+    build: .
+    entrypoint: "/usr/local/bin/entrypoint.sh"
+    volumes:
+      - ./data/web:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "30081:8080"
+      - "50001:50000"
+    environment:
+      - JENKINS_USER=0
+      - http_proxy=http://proxy.kiloutou.ent.root:8081
+      - https_proxy=http://proxy.kiloutou.ent.root:8081
+    networks:
+      jenkins:
+        ipv4_address: 172.18.18.2
+networks:
+  jenkins:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.18.0/24        

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    image: sonatype/nexus3
+    restart: always
+    volumes:
+      - ../opt/my-nexus:/nexus-data
+    ports:
+      - "20081:8081"
+      - "20082:8082"
+      - "20083:8083"
