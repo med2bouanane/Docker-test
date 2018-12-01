@@ -1,7 +1,7 @@
 # nos basamos en la imagen de node version 8
 # la busca en local si no la encuentra la descarga de DockerHub
 FROM node:8
-MAINTAINER mbouanane@kiloutou.fr
+MAINTAINER mbouanane@.com
 
 # Directorio de trabajo dentro del container 
 WORKDIR /app
